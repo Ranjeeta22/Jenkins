@@ -29,7 +29,7 @@ pipeline {
                             cd eks 
                             ls -ltr 
                             make create
-                            aws eks update-kubeconfig  --name dev-eks-cluster
+                            aws eks update-kubeconfig  --name ${ENV}-eks-cluster
                             kubectl get nodes
                         ''' 
                      }
